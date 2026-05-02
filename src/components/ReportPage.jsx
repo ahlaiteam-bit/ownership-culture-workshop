@@ -126,13 +126,13 @@ export default function ReportPage({ module, state, onComplete, onBack }) {
                 {preProcessedData}
               </ReactMarkdown>
               
-              <div className="mt-8 text-center" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                <button className="btn btn--primary" style={{ width: 'auto', padding: '12px 32px' }} onClick={onBack}>
+              <div className="mt-8 text-center" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                <button className="btn btn--primary" style={{ flex: '1 1 200px', padding: '12px 24px' }} onClick={onBack}>
                   ← Back To Dashboard
                 </button>
                 <button 
                   className="btn btn--outline" 
-                  style={{ width: 'auto', padding: '12px 32px' }} 
+                  style={{ flex: '1 1 200px', padding: '12px 24px' }} 
                   onClick={async () => {
                     if (confirm("Are you sure you want to regenerate this report with AI?")) {
                       setLoading(true);
